@@ -1,0 +1,393 @@
+body {
+    margin: 0;
+    background: #fff;
+    color: #333;
+    font-family: 'Lantinghei SC', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -webkit-print-color-adjust: exact;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: inherit; }
+ul, ol { list-style-type: none; }
+p, ul, ol {
+     text-align: justify;
+     text-justify: inter-ideograph;
+     line-height: 1.7;
+ }
+img {border: none;vertical-align: top;}
+a, a:visited { text-decoration: none; color: #08c; }
+a:hover { text-decoration: underline; }
+
+/*侧边栏设置*/
+#fullPage-nav { _display: none;}
+#fullPage-nav li { width: 55px; height: 55px; margin: 30px 0 0; vertical-align: middle;}
+#fullPage-nav li a { float: right; width: 55px; height: 35px; color: #2d6112; text-decoration: none; text-align: right; background: url(../image/dot.png) 5px 5px no-repeat;}
+#fullPage-nav li .active { background-position: 0 bottom;}
+#fullPage-nav span { display: none;}
+.fullPage-tooltip { float: left; top: 0; margin-right: 50px; color: #2d6112; line-height: 21px;}
+
+/* 清浮动*/
+.clear { clear: both; height: 0; overflow: hidden; }
+.clearfix:after {
+     display: block;
+     overflow: hidden;
+     clear: both;
+     height: 0;
+     visibility: hidden;
+     content: '.';
+ }
+
+/* 通用列表样式*/
+.list > li { list-style: disc; margin-left: 1.3em; }
+.motto{
+     font-size: 50px;
+     color: #e7057b;
+     text-align: center;
+     padding-top: 50px;
+    text-shadow: 2px 2px 0 #1c4587;
+ }
+
+/* 页头*/
+header{
+    z-index: 10;
+    height: 50px;
+    padding: 20px 0 0 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#ee3184;
+}
+.header {
+    border-bottom: 1px solid #d6d6d6;
+    line-height: 1;
+    padding: 20px 0;
+    background-color:#ee3184;
+    position: fixed;
+    width: 100%;}
+.name { font-size: 2em;  }
+.header_address { font-style: normal; line-height: 21px; font-size: 1.3em; }
+.header_address_item {
+     padding-left: 24px;
+     background-size: 20px auto;
+     margin-top: 8px;
+     height: 20px;
+     line-height: 21px;
+ }
+.phone { background-position: 0 0; }
+.qq { background-position: 0 -28px; }
+.email { background-position: left bottom; }
+@media (max-width: 319px) {
+    .header_logo { margin-bottom: 12px; line-height: 1.3; }
+    .jobtitle { display: block; }
+    .boundary { margin: 0 20px; clear: both; }
+    .main {padding-top: 50px;}
+}
+
+@media (min-width: 320px) {
+    .header_logo { line-height: 40px; height: 40px; }
+    .jobtitle { padding-left: 10px; }
+    .main {padding-top: 100px;}
+}
+
+@media (min-width: 480px) {
+    .header_address_item { float: left; margin-right: 22px; }
+    .main {padding-top: 100px;}
+}
+@media (max-width: 749px) {
+    .boundary { margin: 0 20px; clear: both; }
+    .main {padding-top:30px;}
+    .motto{font-size: 30px;padding-top: 70px;}
+     header{height: 70px;}
+}
+@media (min-width: 750px) {
+    .boundary { max-width: 980px; margin: 0 auto; clear: both; }
+    .header {
+             height: 40px;
+             overflow: hidden;
+             background: rgba(255, 255, 255, 0.95);
+             background-color:#ee3184;
+         }
+
+    .header .boundary {position: relative;}
+
+    .header_logo {position: relative;float: left;}
+
+    .name {font-size: 2.5em;}
+
+    .jobtitle {
+             position: absolute;
+             left: 100%;
+             bottom: 0;
+             line-height: 20px;
+             white-space: nowrap;
+         }
+
+    .header_address {
+             position: absolute;
+             right: 0;
+             bottom: 0;
+         }
+
+    .header_address_item {
+             margin-left: 28px;
+             margin-right: 0;
+         }
+    .main {padding-top: 30px;}
+}
+@media (min-width: 750px) and (max-width: 1040px) {
+    .boundary { margin: 0 50px; }
+}
+
+/* 章节 */
+.section-header { text-shadow: 1px 1px 0 #fff; line-height: 1.4; }
+.section-header-title{
+    font-size: large;
+    text-align: center;
+    text-shadow: 2px 2px 0.9px red;
+ }
+
+@media (max-width: 749px) {
+    .section .boundary { padding: 25px 0;border-bottom:5px solid #c10055;height: 600px}
+    .section-header { margin-bottom: 20px; }
+    .section-header-title-other{margin-top: 150px}
+    .section-header-title { font-size: 1.625em; }
+    .section-header-subtitle { font-size: 1.25em; }
+}
+
+@media (min-width: 750px) {
+    .section .boundary { padding: 35px 0;border-bottom:5px solid #c10055;height: 600px}
+    .section-header-title-other{margin-top: 100px}
+    .section-header { margin-bottom: 30px; }
+    .section-header-title { font-size: 2.5em; }
+    .section-header-subtitle { font-size: 2.125em; }
+}
+
+
+/*技术技能章节*/
+.tech-skill-list-item {
+     position: relative;
+     -webkit-animation-duration: 1.5s;
+     animation-duration: 1.5s;
+ }
+.html-and-css {
+     width: 0;
+     -webkit-animation-name: bar-html-and-css;
+     animation-name: bar-html-and-css;
+ }
+@-webkit-keyframes bar-html-and-css {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+@keyframes bar-html-and-css {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+.javascript {
+     width: 0;
+     -webkit-animation-name: bar-javascript;
+     animation-name: bar-javascript;
+ }
+@-webkit-keyframes bar-javascript {
+    0% { width: 0; }
+    100% { width: 80%; }
+}
+@keyframes bar-javascript {
+    0% { width: 0; }
+    100% { width: 80%; }
+}
+.jQuery {
+     width: 0;
+     -webkit-animation-name: bar-jQuery;
+     animation-name: bar-jQuery;
+ }
+@-webkit-keyframes bar-jQuery {
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+@keyframes bar-jQuery {
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+.php-and-mysql {
+     width: 0;
+     -webkit-animation-name: bar-php-and-mysql;
+     animation-name: bar-php-and-mysql;
+ }
+@-webkit-keyframes bar-php-and-mysql {
+    0% { width: 0; }
+    100% { width: 60%; }
+}
+@keyframes php-and-mysql {
+    0% { width: 0; }
+    100% { width: 60%; }
+}
+.photoshop {
+     width: 0;
+     -webkit-animation-name: bar-photoshop;
+     animation-name: bar-photoshop;
+ }
+@-webkit-keyframes bar-photoshop {
+    0% { width: 0; }
+    100% { width: 40%; }
+}
+@keyframes bar-photoshop {
+    0% { width: 0; }
+    100% { width: 40%; }
+}
+.ajax {
+     width: 0;
+     -webkit-animation-name: bar-ajax;
+     animation-name: bar-ajax;
+ }
+@-webkit-keyframes bar-ajax {
+    0% { width: 0; }
+    100% { width: 20%; }
+}
+@keyframes bar-ajax {
+    0% { width: 0; }
+    100% { width: 20%; }
+}
+.tech-skill-list-item-name{
+     height: 40px;
+     line-height: 40px;
+     padding-left: 10px;
+     overflow: hidden;
+     border-left: 9px solid;
+     color: #4d79c1;
+     background-color: #ffa9cf;
+     border-color: #8898b2;
+     cursor: pointer;
+ }
+.practised .tech-skill-list-item-name {
+     color: #0f3470;
+     background-color: #f9539c;
+     border-color: #3e567e;
+ }
+.mastered .tech-skill-list-item-name {
+     color: #0d3472;
+     background-color: #f6006b;
+     border-color: #021e4b;
+ }
+.tech-skill-list-item-detail {
+     position: absolute;
+     left: 150px;
+     top: 12px;
+     z-index: 9999;
+     max-width: 600px;
+     padding: 10px;
+     background: rgba(255, 255, 255, 0.8);
+     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+     border-radius: 4px;
+     display: none;
+ }
+
+@media (max-width: 749px) {
+    .tech-skill-list-item { margin-bottom: 15px; }
+}
+
+@media (min-width: 750px) {
+    .tech-skill-list-item { margin-bottom: 20px; }
+    .tech-skill-list-item:hover .tech-skill-list-item-detail {
+             display: block;
+             font-size: 0.875em;
+         }
+}
+
+/*教育背景章节 */
+.eduction{
+    overflow: hidden;
+    width: 580px;
+    margin: 0 auto;
+}
+.eduction-list{
+    float: left;
+    height: auto;
+    min-height: 71px;
+    width: 140px;
+    margin: 0 2px;
+    background: #f9c8ce;
+}
+.eduction-list-item-name{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    background-color: #f67485;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px 5px 0 0;
+    color:#b0004d;
+}
+.eduction-list-item-detail{
+    padding: 40px 20px;
+    background-color: rgba(255,255,255,0.3);
+    font-size: 40px;
+    overflow: hidden;
+    text-align: center;
+    height: auto;
+    display: none;
+}
+.eduction-list-bot{
+    height: 20px;
+    background-color: #ff9daa;
+    border-radius: 0 0 5px 5px;
+}
+
+@media (max-width: 749px) {
+    .eduction-list {  width: 100px;}
+    .eduction-list-item-name{font-size: 2px;}
+    .eduction-list-item-detail{font-size: 20px;}
+}
+
+/*个人喜好*/
+.hobby-list-item-name{
+    font-size: 30px;
+    color: #d80000;
+}
+.hobby-list-item-detail1{
+    margin-top: 8px;
+    margin-bottom: 60px;
+    border-top: 2px dashed #F00;
+}
+.hobby-list-item-detail2{
+    margin-top: 8px;
+    margin-bottom: 30px;
+    border-top: 2px dashed #F00;
+}
+.hobby{
+    background-color: #ffdfdf;
+    margin-top: 20px;
+    padding: 30px 50px;
+    margin-right: 70px;
+}
+.hobby-list{
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
